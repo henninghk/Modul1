@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title></title>
+</head>
+<body>
+    <p>valgboks</p>
+    <input id="sizeSlider" type="range" min="100" max="500" step="10" oninput="showDiv()"/>
+    <select id="radiusChooser" onchange="showDiv()">
+    
+    <option value="red">Red color</option>
+    <option selected value="blue">Blue color</option>
+    <option value="green">Green color</option>
+    </select>
+    
+
+    
+    <p>her er det en ny en</p>
+    
+    <input id="textInput" type="range" min="100" max="500" step="10" oninput="showDiv()"/>
+    
+    <select id="colorChooserleft" onchange="showDiv()">
+    
+        <option value="red">Red color</option>
+        <option selected value="blue">Blue color</option>
+        <option value="green">Green color</option>
+        </select>
+
+    
+        <div id="resultat"></div>
+        <div id="resultatHtml" style="font-family: monospace"></div>
+        <div id="boksen"></div>
+
+
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatHtmlDiv = document.getElementById('resultatHtml');
+        
+        var sizeSlider = document.getElementById('sizeSlider');
+        var textInput = document.getElementById('textInput');
+        
+        var radiusChooser = document.getElementById('radiusChooser');
+        var colorChooserleft = document.getElementById('colorchooserleft');
+        var boks = document.getElementById('boksen');
+        var drop = document.getElementById('radiusChooser');
+        var fargePåBoksen = document.getElementById('fargePåBoksen');
+        showDiv();
+
+    function showDiv() {
+        resultatDiv.innerHTML = '<div style="'
+            + 'background-color: ' + textInput.value + ';'
+            + 'width: ' + sizeSlider.value + 'px;'
+            + 'height: ' + sizeSlider.value + 'px;'
+            + 'border-radius' + radiusChooser.value + 'px';
+            + 'border-style: ' + radiusChooser.value + 'px';
+             '">' 
+            textInput.value + '</div>';
+        resultatHtmlDiv.innerText = resultatDiv.innerHTML;
+    }
+</script>
+</body>
+</html>

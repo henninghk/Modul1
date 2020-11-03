@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>kodelås eksempel ganger ni</p>
+    <button onclick="tell()">tell!</button>
+    <div id="info"startåløsekoden></div>
+    
+
+<script>
+    var tallA = 0;
+    var tekstA = 'tekstA ';
+    
+    console.log(tallA, tekstA);
+
+    function tell(){ 
+        var tallB=0;
+        var tekstB='tekstB ';
+        
+        tallA++;
+        tallB++;
+        tekstA += '*';
+        tekstB += '*';
+    
+        document.getElementById('info').innerHTML = 
+        'tallA=' + tallA +
+        '<br/>tallB=' + tallB +
+        '<br/>tekstA=' + tekstA +
+        '<br/>tekstB=' + tekstB;
+    
+    }
+
+
+    </script>
+    
+</body>
+</html>

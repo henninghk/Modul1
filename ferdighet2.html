@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p1{
+            background: yellow;
+            border: 1px solid black;
+            padding: 10px;
+         }
+    </style>
+
+</head>
+<body onload="nylinje()"></body>
+
+<p1 oncontextmenu="nyeste()" contextmenu="mymenu"> tester museflash</p1><br>
+
+<input type="text" onchange="testonchange()" oninput="testoninput()" onkeydown="tekstoversøkemotor()"/>
+
+<h3 onmouseover="testonmouseover()" onmouseout="testonmouseout()"> hva skjer nå</h3>
+
+<h2 id="info"></h2>hei
+
+<a href="ok"></a>
+
+<p ondblclick="detteerdobbelklikk()">trykk her toganger</p>
+
+
+
+
+<script>
+    
+    function nyeste(){console.log("dennyeste");}
+    
+    function tekstoversøkemotor() {
+        alert("you pressed a key inside the input field");
+        console.log('du presset en knapp');
+    }
+    
+    function detteerdobbelklikk(){
+        document.getElementById("info").innerHTML += "<li>husk trykk toganger</li>";
+        console.log('engangtil');
+    }
+
+    function nylinje(){
+       document.getElementById('info') .innerHTML += '<li>nylinje</li>' ;
+        console.log('perivar');
+    }
+    function testonchange() {
+         document.getElementById('info').innerHTML += '<li>popopp</li>';
+        console.log('nils');
+}
+
+    function testoninput() {
+         document.getElementById('info').innerHTML+='<li>popned</li>';
+        console.log('knut');
+    }
+
+    function testonmouseover() {
+        document.getElementById('info').innerHTML += ' <li>flyttemusover</li>';
+        console.log('jonas');
+    }
+    function testonmouseout() {
+         document.getElementById('info'). innerHTML += '<li>musute</li>' ;
+        console.log('finnbjart');
+    
+
+    }
+    
+    
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p> Ferdighet 10- funskjoner med parametre- synlig resultat </p>
+    <button onclick="hvisDiven(500, 500, 'test 1', 'lightgreen')"> Alternativ 1 </button>
+    <button onclick="hvisDiven(600, 800, 'test 2', 'yellow')"> Alternativ 2</button>
+    <button onclick="hvisDiven(300, 900, 'test 3', 'lightblue')"> Alternativ 3</button>
+    <div id="resultat"> </div>
+
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+
+        function hvisDiven(width, height, text, color) {
+            text = text + ' ' + text + ' ' + text + ' ' + text + ' ' + text;
+            text = text + ' ' + text + ' ' + text + ' ' + text + ' ' + text;
+            var backgroundColor = 'background-color: ' + color + ';';
+            var heigthStyle = 'height: ' + height + 'px;';
+            var widthStyle = 'width: ' + width + 'px;';
+            var style = 'style="' + backgroundColor + widthStyle + heigthStyle + '"';
+            resultatDiv.innerHTML = '<div ' + style + '>' + text + '</div>';
+        }
+    </script>
+</body>
+</html>

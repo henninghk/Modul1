@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <p> Juster Fargen, stil og Radiusen på Rammen her! </p>
+        <input id="rammeRadius" type="range" min="0" max="100" step="10" oninput="hvisBoksen()">
+        
+        <select id="rammeFarge" onchange="hvisBoksen()">
+            <option selected value="none"> Ingen Farge</option>
+            <option value="red"> Rød Farge</option>
+            <option value="green"> Grønn Farge </option>
+            <option value="yellow"> Gul Farge</option>
+        </select>
+        
+        <select id="rammeStil" onchange="hvisBoksen()">
+            <option selected value="none"> Ingen Ramme</option>
+            <option value="dotted"> Prikkete Ramme</option>
+            <option value="solid"> Solid Ramme</option>
+            <option value="dashed"> Stripete Ramme</option>'
+        </select>
+        
+        <p> Her velger du fargen og størrelsen på boksen!</p>
+        <input id="størrelseSkyver" type="range" min="100" max="1000" step="10" oninput="hvisBoksen()">
+
+        <select id="fargePåBoksen" onchange="hvisBoksen()">
+            <option selected value="white"> Hvit Farge</option>
+            <option value="pink"> Rosa Farge</option>
+            <option value="lightblue"> Lyseblå Farge</option>
+            <option value="grey"> Grå farge</option>
+        </select>
+
+                <div id="resultat"></div>
+                <div id="resultatHTML"></div>
+                <div id="boksen"></div>
+
+        <script>
+            var resultatDiv = document.getElementById('resultat');
+            var resultatHTMLDiv = document.getElementById('resultatHTML');
+
+            var fargePåBoksen = document.getElementById('fargePåBoksen');
+            var størrelseSkyver = document.getElementById('størrelseSkyver');
+            var rammeStil = document.getElementById('rammeStil');
+            var rammeFarge = document.getElementById('rammeFarge');
+            var rammeRadius = document.getElementById('rammeRadius');
+            
+            var boks = document.getElementById('boksen');
+            var drop = document.getElementById('rammeStil');
+
+        hvisBoksen();
+
+        function hvisBoksen() {
+            resultatDiv.innerHTML = '<div style="background-color: ' + fargePåBoksen.value + ';'
+            + 'width: ' + størrelseSkyver.value + 'px;'
+            + 'height: ' + størrelseSkyver.value + 'px;'
+            + 'border: ' + rammeFarge.value + ';'
+            + 'border-radius: ' + rammeRadius.value + 'px;'
+            + 'border-style: ' + rammeStil.value + '">' + '</div>';
+            resultatHTMLDiv.innerHTML ;
+        }
+
+        </script>
+        
+    </body>
+</html>
